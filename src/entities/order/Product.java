@@ -1,6 +1,6 @@
 package entities.order;
 
-public class Product {
+public class Product implements Comparable<Product> {
 
     public String name;
     public double price;
@@ -32,5 +32,10 @@ public class Product {
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product other) {
+        return 0;
     }
 }
