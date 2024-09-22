@@ -1,6 +1,5 @@
 package entities.order;
 
-import java.util.Locale;
 import java.util.Objects;
 
 public class Product implements Comparable<Product> {
@@ -27,6 +26,22 @@ public class Product implements Comparable<Product> {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public static void staticPriceUpdate(Product p) {
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
+    public void nonStaticPriceUpdate() {
+        price = price * 1.1;
+    }
+
+    public static boolean staticProductPredicate(Product p) {
+        return p.getPrice() >= 100.00;
+    }
+
+    public boolean nonStaticProductPredicate() {
+        return price >= 100.00;
     }
 
     @Override
