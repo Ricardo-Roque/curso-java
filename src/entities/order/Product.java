@@ -24,28 +24,8 @@ public class Product implements Comparable<Product> {
         return price;
     }
 
-    public static boolean staticProductPredicate(Product p) {
-        return p.getPrice() >= 100.00;
-    }
-
-    public boolean nonStaticProductPredicate() {
-        return price >= 100.00;
-    }
-
-    public static void staticPriceUpdate(Product p) {
-        p.setPrice(p.getPrice() * 1.1);
-    }
-
-    public void nonStaticPriceUpdate() {
-        price = price * 1.1;
-    }
-
-    public static boolean staticProductPredicate(Product p) {
-        return p.getPrice() >= 100.00;
-    }
-
-    public boolean nonStaticProductPredicate() {
-        return price >= 100.00;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
